@@ -1,0 +1,4 @@
+\select@language {greek}
+\contentsline {section}{\IeC {\TextOrMath {\textPi }{\mathPi }}\IeC {\TextOrMath {\textepsilon }{\mathvarepsilon }}\IeC {\TextOrMath {\textrho }{\mathrho }}\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\TextOrMath {\textlambda }{\mathlambda }}\IeC {\TextOrMath {\texteta }{\matheta }}\IeC {\TextOrMath {\textpsi }{\mathpsi }}\IeC {\TextOrMath {\texteta }{\matheta }}}{1}{figure.caption.1}
+\contentsline {section}{\IeC {\TextOrMath {\textTheta }{\mathTheta }}\IeC {\ensuregreek {\acctonos \textepsilon }}\IeC {\TextOrMath {\textmu }{\mathmu }}\IeC {\TextOrMath {\textalpha }{\mathalpha }} 1}{2}{figure.caption.1}
+\contentsline {section}{\IeC {\TextOrMath {\textTheta }{\mathTheta }}\IeC {\ensuregreek {\acctonos \textepsilon }}\IeC {\TextOrMath {\textmu }{\mathmu }}\IeC {\TextOrMath {\textalpha }{\mathalpha }} 2}{3}{figure.caption.3}
