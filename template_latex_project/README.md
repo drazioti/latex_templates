@@ -1,0 +1,1 @@
+Simple TeX Templete for the projects
