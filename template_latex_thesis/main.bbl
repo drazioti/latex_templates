@@ -1,0 +1,38 @@
+\begin{thebibliography}{1}
+
+\bibitem{MathOfGauss}
+J.~F. Grcar, ``Mathematitians of gauss elimination,'' {\em Notices of the
+  American Mathematical Society}, vol.~58, no.~6, pp.~782--792, 2011.
+
+\bibitem{KatalanGauss}
+C.~Gauss, ``Presentació del volum gauss,'' pp.~11--14, Facultat de
+  Matemàtiques i Estadística (ed.), Barchelona, Spain, 2006.
+\newblock Conferències FME: volum III. Curs Gauss, 2005-2006.
+
+\bibitem{CompGaussJordan}
+Y.~M. . L. L.~W. Kyi, ``Performance comparison of gauss elimination and
+  guass-jordan elimination,'' {\em International Journal of Computer Science
+  and Network Security}, vol.~2, no.~2, pp.~67--71, 2014.
+
+\bibitem{NumberAnalys}
+{ \greektext Γ.Δ. ΑΚΡΙΒΗΣ \& Β.Α. ΔΟΥΓΑΛΗΣ}, {\em
+  Εισαγωγή Στην Αριθμητική Ανάλυση}.
+\newblock Πανεπιστημιακές Εκδόσεις Κρήτης,
+  ΗΡΑΚΛΕΙΟ, ΚΡΗΤΗ, 4th~ed., 2013.
+
+\bibitem{StruckParallel}
+M.~McCool, A.~D. Robison, and J.~Reinders, ``Chapter 3 - patterns,'' in {\em
+  Structured Parallel Programming} (M.~McCool, A.~D. Robison, and J.~Reinders,
+  eds.), pp.~79 -- 119, Boston: Morgan Kaufmann, 2012.
+
+\bibitem{ParallelCuda}
+{ Tolga Soyata}, {\em GPU Parallel Program Development Using CUDA}.
+\newblock Chapman \& Hall/CRC Computational Science, Chapman and Hall/CRC,
+  1st~ed., 2018.
+
+\bibitem{nvidiaGuide}
+``Nvida cuda c programming guide version 8.0.''
+  "\url{https://docs.nvidia.com/cuda/archive/8.0/pdf/CUDA_C_Programming_Guide.pdf}",
+  June 2017.
+
+\end{thebibliography}

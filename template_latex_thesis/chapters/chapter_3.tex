@@ -1,0 +1,54 @@
+\section{Υλοποίηση του \lt Gauss με Σειριακό Προγραμματισμό}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Σειριακός Προγραμματισμός}    
+Σε ένα σειριακό πρόγραμμα ο υπολογιστής εκτελεί τις εντολές του, τη μία πίσω από την άλλη, 
+    
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\subsection{Γλώσσα {\lt C}}
+    
+Η γλώσσα {\lt C} επινοήθηκε το 1972 από τον {\lt Dennis Ritchie} στα εργαστήρια {\lt Bell}. Δημιουργήθηκε για να εξυπηρετήσει το λειτουργικό σύστημα {\lt Unix}, το οποίο έως τότε ήταν γραμμένο σε {\lt assembly}.
+
+\begin{algorithm}[H]
+ \footnotesize {
+\begin{algor} : {Πολλαπλασιασμός του \lt{Karatsuba}}\\
+{\bf Είσοδος.} $a,b$ ακέραιοι\\
+{\bf Έξοδος.} $a\cdot b$
+\end{algor}
+{\lt{
+ \SetAlgoLined
+\nl def karatsuba(a, b)\\
+\nl\ \If {$a<100$ or $b<100$}{
+     return $a\cdot b$
+     }    
+\nl\ $m=\max(\log_{10}(a),\log_{10}(b))$\\
+\nl\ $m_2=floor(m/2)$\\
+\nl\  $high(a)$ = take the first $m_2$ decimal digits of $a$\\
+\nl\  $low(a)$ = take the last $m_2$ decimal digits of $a$\\
+\nl\  $high(b)$ = take the first $m_2$ decimal digits of $b$\\
+\nl\  ...\\
+\nl\  ...\\
+\nl\  ....\\
+\nl  print $(z_2\cdot 10^{2m_2}+(z1-z2-z0)\cdot 10^{m_2}+z_0$}}
+              }
+\end{algorithm}
+
+\newpage
+
+{\footnotesize{
+\noindent
+\begin{algor} : {Αλγόριθμος Απαρίθμησης (\lt{KFP enumeration algorithm})}\label{al-enum}\\
+{\bf Είσοδος.}  Μια διατεταγμένη βάση $\mathcal{B}=\{{\bf b}_1,\dots, {\bf{b}}_n\}\subset\mathbb{Z}^{m}$ 
+του πλέγματος $\mathcal{L}(\mathcal{B})$ και ένα θετικό αριθμό $R.$ \\
+{\bf Έξοδος.} Όλα τα διανύσματα ${\bf x}\in \L$ με $||{
+\bf x}||\leq R.$
+\end{algor}
+\lt{\ \\
+	\texttt{01.}   {\texttt{Compute $\{\mu_{ij}\}$ and $B_i=||{\bf b}_i^{*}||^2$}}\\
+    \texttt{02.}   {\texttt{${\bf x}=(x_i)\leftarrow {\bf 0}_n$,${\bf c}=(c_i)\leftarrow {\bf 0}_n$, ${\bf \ell}=(\ell_i)\leftarrow {\bf 0}_n$, $sumli\leftarrow 0, S=\emptyset, i\leftarrow 1$}\\
+    \texttt{03.}  \texttt{{\bf While}} $i\leq n$\\
+	\texttt{04.}   \hspace*{0.4cm} $c_{i}\leftarrow -\sum_{j=i+1}^n x_j\mu_{ji}$\\
+	\texttt{05.}  ...\\ \\ \\
+	\texttt{19.}	{\texttt{return S}}\\
+}}}

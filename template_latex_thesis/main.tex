@@ -1,0 +1,130 @@
+%%%%%%%% latex template for graduate thesis
+%%%%%%%% credits : I. Rigopoulos, I. Moschidou,  K. Draziotis
+
+%%%%%%%% Licence GPL
+% Ιf someone improve this template he/she can add his/her name and send it back to drazioti@gmail.com
+% Compile main.tex with latex and bibtex 
+
+
+\documentclass[12pt]{article}
+\usepackage{helvet} 
+\usepackage{amsmath}
+\usepackage{titlesec}
+\usepackage{lipsum}
+\usepackage{textcomp}
+
+\titleformat{\section}[display]
+          {\clearpage\vspace*{50pt}%
+          \normalfont\huge\bfseries}%
+          {{\Kappa}E{\Phi}A{\Lambda}AIO \thesection}%
+          {20pt}%
+          {\Huge}%
+          [\vspace{40pt}]
+
+\usepackage[algosection,commentsnumbered,ruled,vlined]{algorithm2e}
+\NoCaptionOfAlgo
+\usepackage{chemarrow}
+\newcommand\aug{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
+\usepackage{graphicx}
+\usepackage{gfsdidot}
+\usepackage[LGR,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,greek]{babel} % και για τις δυο γλώσσες
+\usepackage{alphabeta}
+\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
+\usepackage{makeidx}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{systeme}
+\usepackage{algorithmic}
+%\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{geometry}
+\usepackage{float}
+\geometry{
+ a4paper,
+ %total={170mm,257mm},
+ left=25mm,
+ right=25mm,
+ %top=20mm,
+ }
+
+\newtheorem{algor}{\bf{Αλγόριθμος}}[subsection]
+\newcommand{\lt}{\latintext}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%% PAGE 0 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{gobble} %no numbering
+
+\include{start_sections/1_opening_page}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% PAGE 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\pagenumbering{arabic} %get the Numbers back
+
+\include{start_sections/2_ypeuthynh_dhlwsh}
+
+%%%%%%%%%%%%%%%%%%%%%% PAGE 2-3 %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+%Abstract/Περιγραφή
+\include{start_sections/3_abstract}
+
+%%%%%%%%%%%%%%%%%%%%%% PAGE 4 %%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+% Πίνακας Περιεχομένων
+\tableofcontents
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INCLUDE YOUR CHAPTERS/SECTIONS HERE
+%%
+%\mainmatter
+
+%Εισαγωγή
+\include{chapters/chapter_1_intro}
+
+%Gauss Elimination
+\include{chapters/chapter_2}
+
+%Σειριακός Προγραμματισμός
+\include{chapters/chapter_3}
+
+%Παράλληλος Προγραμματισμός
+\include{chapters/chapter_4}
+
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Παραρτήματα
+	%\appendix
+	\include{end_sections/Appen}
+	
+%	\cleardoublepage
+% Γλωσσάριο
+	\include{end_sections/glossary}
+% Βιβλιογραφία - Αναφορές
+	%\bibliography{references}
+        %\begin{otherlanguage*}{english}
+		\bibliography{biblio}
+	%\end{otherlanguage*}
+	\bibliographystyle{ieeetr}%plain}
+	
+	%\printbibliography
+	
+	\nocite{*}
+	
+	\appendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\backmatter
+% Ευρετήριο Όρων
+%	\printindex
+%	\cleardoublepage
+
+\end{document}
