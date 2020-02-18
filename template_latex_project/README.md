@@ -1,5 +1,5 @@
-Simple TeX Templete for the projects
+Simple TeX Template for the projects
 
-For your project only use Creative Commons licence for your images.
+[1] Only use Creative Commons licence for your images.
 
-Do not use code/snippets of other programmers, without providing credits to the author of the code.
+[2] Do not use code/snippets of other programmers, without providing credits to the author of the code.
