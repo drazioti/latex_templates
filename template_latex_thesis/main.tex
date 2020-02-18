@@ -8,6 +8,7 @@
 
 \documentclass[12pt]{article}
 \usepackage{helvet} 
+\usepackage{mathtools}
 \usepackage{amsmath}
 \usepackage{titlesec}
 \usepackage{lipsum}
@@ -97,26 +98,21 @@
 \include{chapters/chapter_4}
 
 
-\newpage
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+% Βιβλιογραφία - Αναφορές
+
+	%\bibliography{references}
+        \begin{otherlanguage*}{english}
+		\bibliography{biblio}
+		\end{otherlanguage*}
+	\bibliographystyle{plain}
+	
 % Παραρτήματα
 	%\appendix
 	\include{end_sections/Appen}
-	
-%	\cleardoublepage
-% Γλωσσάριο
-	\include{end_sections/glossary}
-% Βιβλιογραφία - Αναφορές
-	%\bibliography{references}
-        %\begin{otherlanguage*}{english}
-		\bibliography{biblio}
-	%\end{otherlanguage*}
-	\bibliographystyle{ieeetr}%plain}
-	
-	%\printbibliography
-	
+	\include{end_sections/glossary}	
 	\nocite{*}
 	
 	\appendix
