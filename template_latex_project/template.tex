@@ -215,10 +215,16 @@
 
 \begin{document}
 \begin{titlepage}
+
+{\LARGE Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης}
+\begin{center} {\Large Σχολή Θετικών Επιστημών} \end{center}
+\begin{figure}[h]
+\raggedright
+\hspace{90pt}
+\includegraphics[width=0.5\linewidth]{logo.png}
+\end{figure}
 \begin{center}
 
-{\LARGE Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης\\}
-{\Large Σχολή Θετικών Επιστημών, Τμήμα Πληροφορικής  \\}
 
 \begin{figure}[h]
 \centering 
@@ -275,7 +281,8 @@ $({\bf i}).$ ....
 \end{figure}
 \clearpage
 (${\bf ii}.$) Για την υλοποίηση του \lt{One Time Pad} ...
-\par Παρακάτω φαίνεται και η υλοποίηση.
+\par Παρακάτω φαίνεται και η υλοποίηση.\\
+.....
 \begin{figure}[h]
 \centering 
 %\includegraphics[width=1\linewidth]{otp.png}
@@ -286,6 +293,7 @@ $({\bf i}).$ ....
 \section*{{\color{maroon}Θέμα 2}}
 
 \section*{\lt{Auxiliary results}}
+{\lt{
 \begin{proposition}\label{basic}
 Let $n,q$ and $A_j$ be positive integers with $A_j$ such that 
 \begin{equation}\label{asterisq0}
@@ -306,11 +314,14 @@ ${\bf b}_0 = (-1,A_1,...,A_{n}),$
 ${\bf b}_j = (0,0,...,q,...,0),$ where $q$ is in the position $j+1$ for $j=1,...,n.$ Then, for all non-zero ${\bf v}\in L$ we have
 $$||{\bf v}||>\frac{q^{n/(n+1)+f_q(n)}}{2}.$$
 \end{proposition}
+}}
+
 \section*{{\color{maroon}Θέμα 3}}
 
-The next code will be directly imported from a file
-
+Παράδειγμα κώδικα σε \lt{tex}
+{\lt{
 \lstinputlisting[language=python]{Code/example.py}
+}}
 
 \bibliographystyle{plain}
 \bibliography{bib.bib}
