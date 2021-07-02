@@ -1,0 +1,302 @@
+% This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+\documentclass{beamer}
+
+\usetheme{Warsaw}
+\definecolor{myred}{rgb}{.49,0,0}
+\usecolortheme[named=myred]{structure}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[greek,english]{babel}
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={4.0},
+]{doclicense}
+
+\newcommand{\el}{\selectlanguage{greek}}
+\newcommand{\en}{\selectlanguage{english}}
+
+\en
+\title[\el{Θεμελιώσεις Κρυπτογραφίας}]{\el{Κλάσεις Πολυπλοκότητας}}
+\author[\el{Κλάσεις Πολυπλοκότητας}]{\el{Δέκας Δημήτριος}}
+\institute{\el{Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης}}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\doclicenseThis
+\end{frame}
+
+\el
+
+\begin{frame}{Εισαγωγή}
+	\begin{block}{Θεωρία Υπολογισμού}
+		Ο κλάδος της θεωρητικής πληροφορικής που πραγματεύεται το εάν και το πόσο αποδοτικά είναι δυνατόν να λυθεί κάποιο πρόβλημα με χρήση κάποιου αλγορίθμου σε ένα υπολογιστικό μοντέλο.		
+	\end{block}\pause
+		\vspace{5mm}
+		Διαιρείται στους εξής δύο κύριους υποκλάδους:\pause
+	\begin{itemize}
+		\item θεωρία Υπολογισιμότητας\pause
+		\item θεωρία Πολυπλοκότητας
+	\end{itemize}	
+\end{frame}
+
+\begin{frame}{Εισαγωγή}
+	\begin{block}{Θεωρία Πολυπλοκότητας}
+		Ασχολείται με τον υπολογισμό των πόρων που απαιτούνται για την αλγοριθμική επίλυση ενός προβλήματος. Κατατάσσει τα προβλήματα σε κλάσεις πολυπλοκότητας βάση αυτού του κόστους.
+	\end{block}\pause
+	\vspace{5mm}
+	Οι σημαντικότεροι πόροι για τους οποίους ενδιαφερόμαστε:\pause
+	\begin{itemize}
+		\item Χρόνος\pause
+		\item Χώρος
+	\end{itemize}
+\end{frame}
+	
+\begin{frame}{Εισαγωγή}
+	\begin{block}{Κλάσεις Πολυπλοκότητας}
+		Κλάσεις ισοδυναμίας που ορίζουν ότι τα προβλήματα που ανήκουν σε μία κλάση, έχουν την ίδια πολυπλοκήτατα ως προς τον εξεταζόμενο πόρο.
+	\end{block}
+	\vspace{5mm}\pause
+	Κάθε κλάση πολυπλοκότητας ακολουθεί τον παρακάτω ορισμό:
+	\vspace{5mm}
+	\begin{block}{Ορισμός}
+		Ένα σύνολο προβλημάτων το οποίο μπορεί να λυθεί απο ένα αυτόματο \en $M$, \el κάνοντας χρήση του πόρου \en $R$ \el με πολυπλοκότητα \en $O(f(n))$, \el όπου \en $n$ \el το μέγεθος της εισόδου.
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{P (Polynomial Time)\el}}
+	\begin{block}{Ορισμός}
+		Η κλάση των γλωσσών \en L \el που είναι αποφασίσιμες σε πολυωνυμικό χρόνο από μία ντετερμινιστική μηχανή \en Turing. \el
+	\end{block}\pause
+	\vspace{5mm}
+	Χαρακτηριστικά προβλήματα που ανήκουν στην κλάση:\pause
+	\begin{itemize}
+	\item Έλεγχος πρώτων αριθμών (\en AKS Primality Test)\pause
+	\item \en Greatest Common Divisor\pause
+	\item ST-Connectivity\pause
+	\item Linear Programming \el
+	\end{itemize}
+\end{frame}
+	
+\begin{frame}{\en{NP (Non-Deterministic Polynomial Time)\el}}
+	\begin{block}{Ορισμός}
+		Η κλάση των γλωσσών \en L \el που είναι αποφασίσιμες σε πολυωνυμικό χρόνο από μία \textbf{μη}-ντετερμινιστική μηχανή \en Turing.\el
+	\end{block}\pause
+	Χαρακτηριστικά προβλήματα που ανήκουν στην κλάση:\pause
+	\begin{itemize}
+	\item \en Discrete Log Problem \pause
+	\item Integer Factorization\pause
+	\item Graph isomorphism\pause
+	\item Minimum Circuit Size Problem\el
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{θεώρημα \en Cook-Levin \el}
+	Το θεώρημα των \en Cook-Levin \el απέδειξε ότι το πρόβλημα της \en Boolean \el ικανοποίησης ανήκει στην κλάση \en NP-Complete. \el Μετά απο αυτό το θεώρημα ακολούθησαν πολλά άλλα προβλήματα τα οποία εντάχθηκαν στην κλάση \en NP-Complete. \el
+\end{frame}
+
+\begin{frame}{\en{NP-Complete \el}}
+	\begin{block}{Ορισμός}
+		Η κλάση των γλωσσών \en L \el για τις οποίες ισχύει:
+		\begin{enumerate}
+		\item Η \en L \el ανήκει στην κλάση \en NP. \el
+		\item Κάθε γλώσσα στην κλάση \en NP \el είναι δυνατόν να αναχθεί στην \en L \el σε πολυωνυμικό χρόνο.
+		\end{enumerate}
+	\end{block}\pause
+	\vspace{5mm}
+	Χαρακτηριστικά προβλήματα που ανήκουν στην κλάση:\pause
+	\begin{itemize}
+	\item \en Boolean satisfiability (Circuit-SAT, SAT, 3-SAT)\pause
+	\item Hamiltonian Path\pause
+	\item Graph coloring\pause
+	\item Sudoku \el
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\en P vs NP \el}
+	\begin{block}{Ερώτημα}
+		Είναι δυνατόν να βρεθεί ένας αλγόριθμος για κάθε πρόβλημα, το οποίο ανήκει στην κλάση \en NP, \el έτσι ώστε να μπορεί αυτό να λυθεί σε πολυωνυμικό χρόνο και άρα να ανήκει εν τέλει στην κλάση \en P\el?\pause
+	\end{block}
+	\vspace{3mm}
+	Με χρήση της κλάσης \en NP-Complete \el το παραπάνω ερώτημα μπορεί να διατυπωθεί με εναλλακτικό τρόπο ως εξής:
+	\vspace{3mm}
+	\begin{block}{Εναλλακτική Διατύπωση}
+		Είναι δυνατόν να βρεθεί ένας αλγόριθμος για \textbf{κάποιο} πρόβλημα, το οποίο ανήκει στην κλάση \en \textbf{NP-Complete}, \el έτσι ώστε να μπορεί αυτό να λυθεί σε πολυωνυμικό χρόνο και άρα να ανήκει εν τέλει στην κλάση \en P\el?
+	\end{block}
+\end{frame}
+
+\begin{frame}{Τι θα συνέβαινε εάν  \en P = NP \el}
+	\begin{itemize}
+	\item Πλήρης κατανόηση της αναδίπλωσης των πρωτεϊνών.\pause
+	\item Ραγδαία πρόοδος στην παραγωγική διαδικασία.\pause
+	\item Ένα σημαντικό μέρος κρυπτογραφικών συστημάτων θα παύσει να είναι κατάλληλο  για χρήση.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\en{Co-NP\el}}
+\begin{block}{Ορισμός}
+		Η κλάση των γλωσσών \en L \el των οποίων τα αρητικά στιγμιότυπα είναι αποφασίσιμα σε πολυωνυμικό χρόνο από μία μη-ντετερμινιστική μηχανή \en Turing.\el
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{Co-NP-Complete\el}}
+\begin{block}{Ορισμός}
+		Η κλάση των γλωσσών \en L \el για τις οποίες ισχύει:
+		\begin{enumerate}
+		\item Η \en L \el ανήκει στην κλάση \en Co-NP. \el
+		\item Κάθε γλώσσα στην κλάση \en Co-NP \el είναι δυνατόν να αναχθεί στην \en L \el σε πολυωνυμικό χρόνο.
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{EXPTIME (DEXPTIME)\el}}
+	\begin{block}{Ορισμός}
+		Η κλάση των γλωσσών \en L \el που είναι αποφασίσιμες σε εκθετικό χρόνο από μία ντετερμινιστική μηχανή \en Turing. \el
+	\end{block}\pause
+	\vspace{5mm}
+	Χαρακτηριστικά προβλήματα που ανήκουν στην κλάση:\pause
+	\begin{itemize}
+	\item Στρατηγική νίκης σε κάποιο παιχνίδι \pause
+	\item Αποδοχή απο μηχανή \en Turing \el σε \en t \el βήματα
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\en{NEXPTIME\el}}
+	\begin{block}{Ορισμός}
+		Η κλάση των γλωσσών \en L \el που είναι αποφασίσιμες σε εκθετικό χρόνο από μία \textbf{μη}-ντετερμινιστική μηχανή \en Turing. \el
+	\end{block}\pause
+	\vspace{5mm}
+	Χαρακτηριστικά προβλήματα που ανήκουν στην κλάση:\pause
+	\begin{itemize}
+	\item \en SUCCINCT NP-Complete problems
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\en{RP (Randomized Polynomial Time)\el}}
+	\begin{block}{Ορισμός}
+		Η κλάση των γλωσσών \en L \el για τις οποίες υπάρχει πιθανολογική μηχανή \en Turing \el με τις εξής ιδιότητες:
+		\begin{enumerate}
+			\item Τρέχει πάντοτε σε πολυωνυμικό χρόνο.
+			\item Εάν η σωστή απάντηση στο ερώτημα αποδοχής κάποιας συμβολοσειράς είναι ΟΧΙ, τότε \textbf{πάντα} επιστρέφει ΟΧΙ.
+			\item Εάν η σωστή απάντηση στο ερώτημα αποδοχής κάποιας συμβολοσειράς είναι ΝΑΙ, επιστρέφει ΝΑΙ με πιθανότητα τουλάχιστον $\frac{1}{2}$, αλλιώς επιστρέφει ΟΧΙ.
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{Co-RP\el}}
+	\begin{block}{Ορισμός}
+		Η κλάση των γλωσσών \en L \el για τις οποίες υπάρχει πιθανολογική μηχανή \en Turing \el με τις εξής ιδιότητες:
+		\begin{enumerate}
+			\item Τρέχει πάντοτε σε πολυωνυμικό χρόνο.
+			\item Εάν η σωστή απάντηση στο ερώτημα αποδοχής κάποιας συμβολοσειράς είναι ΝΑΙ, τότε \textbf{πάντα} επιστρέφει ΝΑΙ.
+			\item Εάν η σωστή απάντηση στο ερώτημα αποδοχής κάποιας συμβολοσειράς είναι ΟΧΙ, επιστρέφει ΟΧΙ με πιθανότητα τουλάχιστον $\frac{1}{2}$, αλλιώς επιστρέφει ΝΑΙ.
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{ZPP (Zero-Error Probabilistic Polynomial Time)\el}}
+	\begin{block}{Ορισμός}
+		Η κλάση των γλωσσών \en L \el για τις οποίες υπάρχει πιθανολογική μηχανή \en Turing \el με τις εξής ιδιότητες:
+		\begin{enumerate}
+			\item Τρέχει πάντοτε σε πολυωνυμικό χρόνο.
+			\item Στο ερώτημα αποδοχής κάποιας συμβολοσειράς ενδέχεται να απαντήσει ΝΑΙ, ΟΧΙ ή ΔΕΝ ΓΝΩΡΙΖΩ.
+			\item Εάν απαντήσει ΝΑΙ ή ΟΧΙ, τότε αυτή είναι η σωστή απάντηση.
+			\item Επιστρέφει ΔΕΝ ΓΝΩΡΙΖΩ με πιθανότητα $\leq \frac{1}{2}$.
+		\end{enumerate}
+	\end{block}
+	\begin{block}{Θεώρημα}
+		Ισχύει \en $ZPP = RP \cap Co-RP$. \el
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{BPP (Bounded-Error Probabilistic Polynomial Time)\el}}
+	\begin{block}{Ορισμός}
+		Η κλάση των γλωσσών \en L \el για τις οποίες υπάρχει πιθανολογική μηχανή \en Turing \el με τις εξής ιδιότητες:
+		\begin{enumerate}
+			\item Τρέχει πάντοτε σε πολυωνυμικό χρόνο.
+			\item Σε κάθε ερώτημα αποδοχής κάποιας συμβολοσειράς, έχει πιθανοτητα το πολύ $\frac{1}{3}$ να δώσει λάθος απάντηση, είτε αυτή είναι ΝΑΙ, είτε ΟΧΙ.
+		\end{enumerate}
+	\end{block}
+	\vspace{5mm}
+	\begin{block}{Υπολογισμοί σε Κβαντικούς Υπολογιστές}
+			Υπάρχει ανάλογη κλάση πολυπλοκότητας, η οποία αφορά προβλήματα απόφασης που λύνονται από κβαντικούς υπολογιστές σε πολυωνυμικό χρόνο και ονομάζεται \en Bounded-Error Quantum Polynomial Time. \el
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{PP (Probabilistic Polynomial Time)\el}}
+	\begin{block}{Ορισμός}
+		Η κλάση των γλωσσών \en L \el για τις οποίες υπάρχει πιθανολογική μηχανή \en Turing \el με τις εξής ιδιότητες:
+		\begin{enumerate}
+			\item Τρέχει πάντοτε σε πολυωνυμικό χρόνο.
+			\item Εάν η σωστή απάντηση στο ερώτημα αποδοχής κάποιας συμβολοσειράς είναι ΝΑΙ, τότε επιστρέφει ΝΑΙ με πιθανότητα $> \frac{1}{2}$. 
+			\item Εάν η σωστή απάντηση στο ερώτημα αποδοχής κάποιας συμβολοσειράς είναι ΟΧΙ, τότε επιστρέφει ΝΑΙ με πιθανότητα $\leq \frac{1}{2}$.
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{PSPACE\el}}
+	\begin{block}{Ορισμός}
+		Η κλάση των γλωσσών \en L \el που είναι αποφασίσιμες από μία ντετερμινιστική μηχανή \en Turing \el και απαιτούν πολυωνυμικό χώρο σε σχέση με το μέγεθος της εισόδου.
+	\end{block}
+		Χαρακτηριστικά προβλήματα που ανήκουν στην κλάση:\pause
+	\begin{itemize}
+	\item \en First-order Thery Problems\pause
+	\item QSAT\pause
+	\item Succinct versions of many graph problems. \el
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\en{NPSPACE\el}}
+	\begin{block}{Ορισμός}
+		Η κλάση των γλωσσών \en L \el που είναι αποφασίσιμες από μία \textbf{μη}-ντετερμινιστική μηχανή \en Turing \el και απαιτούν πολυωνυμικό χώρο σε σχέση με το μέγεθος της εισόδου.
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{EXPSPACE\el}}
+	\begin{block}{Ορισμός}
+		Η κλάση των γλωσσών \en L \el που είναι αποφασίσιμες από μία ντετερμινιστική μηχανή \en Turing \el και απαιτούν εκθετικό χώρο σε σχέση με το μέγεθος της εισόδου.
+	\end{block}
+		Χαρακτηριστικά προβλήματα που ανήκουν στην κλάση:\pause
+	\begin{itemize}
+	\item \en Ideal Membership Problem\pause
+	\item Problems related to Vector Addition Systems\pause
+	\item Temporal Planning with Concurrent Actions
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\en{NEXPSPACE\el}}
+	\begin{block}{Ορισμός}
+		Η κλάση των γλωσσών \en L \el που είναι αποφασίσιμες από μία \textbf{μη}-ντετερμινιστική μηχανή \en Turing \el και απαιτούν εκθετικό χώρο σε σχέση με το μέγεθος της εισόδου.
+	\end{block}
+\end{frame}
+
+\begin{frame}{Θεώρημα του \en{Savitch\el}}
+	Διατυπώθηκε και αποδείχθηκε (μέσω μια κατασκευαστικής απόδειξης) από τον \en Walter Savitch \el το 1970 και δίνει μία σχέση ανάμεσα στην ντετερμινιστική και μη-ντετερμινιστική χωρική πολυπλοκότητα. Το θεώρημα δηλώνει ότι για κάθε συνάρτηση $f\in\Omega\left(log\left(n\right()\right)$ ισχύει το εξής:\\
+	\vspace{3mm}
+	\begin{center}
+		$NSPACE\left(f\left(n\right)\right) \subseteq DSPACE\left(f\left(n\right)\right)^2$
+	\end{center}\pause
+	\vspace{3mm}
+	Απο το θεώρημα αυτό προκύπτουν δύο πολύ χρήσιμα αποτελέσματα:\pause
+	\vspace{2mm}
+		\begin{enumerate}
+			\item $PSPACE = NPSPACE$\pause
+			\item $EXPSPACE = NEXPSPACE$
+		\end{enumerate}
+\end{frame}
+
+\begin{frame}{Ευχαριστίες}
+	\begin{center}
+		Σας ευχαριστώ για την προσοχή και τον χρόνο σας.\\
+		Μήν διστάσετε να κάνετε οποιαδήποτε ερώτηση.\\
+		\vspace{25mm}
+		Ευχαριστώ τον Θανάση Βράνη για την πολύτιμη βοήθεια του.
+	\end{center}
+\end{frame}
+
+\end{document}
