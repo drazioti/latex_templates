@@ -1,0 +1,303 @@
+% This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+\documentclass{beamer}
+
+\usetheme{Warsaw}
+\definecolor{myred}{rgb}{.49,0,0}
+\usecolortheme[named=myred]{structure}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[greek,english]{babel}
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={4.0},
+]{doclicense}
+
+\newcommand{\el}{\selectlanguage{greek}}
+\newcommand{\en}{\selectlanguage{english}}
+
+\en
+\title[Cryptography]{Complexity Classes}
+\author[Complexity Classes]{Dimitrios Dekas}
+\institute{Aristotle University of Thessaloniki}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\doclicenseThis
+\end{frame}
+
+\begin{frame}{Introduction}
+	\begin{block}{Theory of Computation}
+		The field of theoretical computer science that examines the ability of a computational model to efficiently solve a particular problem using a certain algorithm.
+	\end{block}\pause
+		\vspace{5mm}
+		Can be divided into two main sub-fields: \pause
+	\begin{itemize}
+		\item Computability Theory \pause
+		\item Computational Complexity Theory
+	\end{itemize}	
+\end{frame}
+
+\begin{frame}{\en Introduction \el}
+	\begin{block}{\en Computational Complexity Theory \el}
+		It deals with the calculation of the resources required for the algorithmic solution of a problem. Classifies problems into complexity classes based on these costs.
+	\end{block}\pause
+	\vspace{5mm}
+	\en Important computational resources: \pause
+	\begin{itemize}
+		\item \en Time \el \pause
+		\item \en Space \el
+	\end{itemize}
+\end{frame}
+	
+\begin{frame}{\en Introduction \el}
+	\begin{block}{\en Complexity Classes \el}
+		Equivalence classes that group problems of the same complexity with regard to the resource in question. 
+	\end{block}
+	\vspace{5mm}\pause
+	Each complexity class falls under the following definition:
+	\vspace{5mm}
+	\begin{block}{\en Definition \el}
+		A set of problems that are solvable by an automaton $M$, using the resource $R$, with complexity equal to $O (f (n)),$ where $n$ is the size of the input. 
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{P (Polynomial Time)\el}}
+	\begin{block}{\en Definition \el}
+		The class containing every language L that is decidable by a deterministic Turing machine in polynomial time.
+	\end{block}\pause
+	\vspace{5mm}
+	\en \underline{Problems included in this class}  \el\pause
+	\begin{itemize}
+		\item \en AKS Primality Test \pause
+		\item \en Greatest Common Divisor \pause
+		\item ST-Connectivity \pause
+		\item Linear Programming \el
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\en{NP (Non-Deterministic Polynomial Time)\el}}
+	\begin{block}{\en Definition \el}
+			The class containing every language L that is decidable by a \textbf{non}-deterministic Turing machine in polynomial time.
+	\end{block}\pause
+	\vspace{5mm}
+	\en \underline{Problems included in this class}  \el\pause
+	\begin{itemize}
+	\item \en Discrete Log Problem \pause
+	\item Integer Factorization\pause
+	\item Graph isomorphism\pause
+	\item Minimum Circuit Size Problem\el
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\en Cook-Levin Theorem \el}
+	The Cook-Levin theorem proved that the boolean satisfiability problem belongs to the NP-Complete class. Succeeding this theorem, a plethora of different problems were also added to the NP-Complete class.
+\end{frame}
+
+\begin{frame}{\en{NP-Complete \el}}
+	\begin{block}{\en Definition \el}
+		The class containing every language L so that:
+		\begin{enumerate}
+			\item L belongs to the NP class.
+			\item Every language in NP is reducible to L in polynomial time.
+		\end{enumerate}
+	\end{block} \pause
+	\vspace{5mm}
+	\en \underline{Problems included in this class}  \el\pause
+	\begin{itemize}
+		\item \en Boolean satisfiability (Circuit-SAT, SAT, 3-SAT)\pause
+		\item Hamiltonian Path\pause
+		\item Graph coloring\pause
+		\item Sudoku \el
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\en P vs NP \el}
+	\begin{block}{\en Question \el}
+		Is it possible to discover an algorithm for each problem belonging to the NP class, so that it can be solved in polynomial time and therefore it ultimately belongs to the class P?  \pause
+	\end{block}
+	\vspace{3mm}
+		The above question can be reformulated by using the NP-Complete class as follows: \pause
+	\vspace{3mm}
+	\begin{block}{\en Alternative Formulation \el}
+		Is it possible to discover an algorithm for a single problem belonging to the NP-Complete class, so that it can be solved in polynomial time and therefore it ultimately belongs to the class P?
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en What would happen if P = NP \el}
+	\begin{itemize}
+		\item Complete understanding of protein folding. \pause
+		\item Rapid progress in the production process. \pause
+		\item A significant portion of cryptographic systems will no longer be usable. 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\en{Co-NP\el}}
+\begin{block}{\en Definition \el}
+		The class containing every language L whose negative snapshots are decidable by a non-deterministic Turing machine in polynomial time.  
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{Co-NP-Complete\el}}
+\begin{block}{\en Definition \el}
+		The class containing every language L so that:
+		\begin{enumerate}
+			\item L belongs to the Co-NP class.
+			\item Every language in Co-NP is reducible to L in polynomial time.
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{EXPTIME (DEXPTIME)\el}}
+	\begin{block}{\en Definition \el}
+		The class containing every language L that is decidable by a deterministic Turing machine in exponential time.
+	\end{block}\pause
+	\vspace{5mm}
+	\en \underline{Problems included in this class}  \el\pause
+	\begin{itemize}
+		\item \en Winning game strategies \pause
+		\item  T-step Turing maching acceptance. \el
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\en{NEXPTIME\el}}
+	\begin{block}{\en Definition \el}
+		The class containing every language L that is decidable by a \textbf{non}-deterministic Turing machine in exponential time.
+	\end{block}\pause
+	\vspace{5mm}
+	\en \underline{Problems included in this class}  \el \pause
+	\begin{itemize}
+		\item \en SUCCINCT NP-Complete problems
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\en{RP (Randomized Polynomial Time)\el}}
+	\begin{block}{\en Definition \el}
+		The class containing every language L for which there is a probabilistic Turing machine with the following properties:
+		\begin{enumerate}
+			\item It always runs in polynomial time.
+			\item If the correct answer to the question of accepting a string is NO, then it \textbf{always} returns NO.
+			\item If the correct answer to the question of accepting a string is YES, then it returns YES with a probability of at least $\frac{1}{2},$ otherwise it returns NO.
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{Co-RP\el}}
+	\begin{block}{\en Definition \el}
+		The class containing every language L for which there is a probabilistic Turing machine with the following properties:
+		\begin{enumerate}
+			\item It always runs in polynomial time.
+			\item If the correct answer to the question of accepting a string is YES, then it \textbf{always} returns YES.
+			\item If the correct answer to the question of accepting a string is NO, then it returns NO with a probability of at least $\frac{1}{2},$ otherwise it returns YES.
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{ZPP (Zero-Error Probabilistic Polynomial Time)\el}}
+	\begin{block}{\en Definition \el}
+		The class containing every language L for which there is a probabilistic Turing machine with the following properties:
+		\begin{enumerate}
+			\item It always runs in polynomial time.
+			\item It returns an answer equal to YES, NO or DO NOT KNOW.
+			\item The answer is always either DO NOT KNOW or the correct answer.
+			\item It returns DO NOT KNOW with probability $\leq \frac{1}{2}$.
+		\end{enumerate}
+	\end{block}
+	\begin{block}{Theorem}
+		It is known that \en $ZPP = RP \cap Co-RP$. \el
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{BPP (Bounded-Error Probabilistic Polynomial Time)\el}}
+	\begin{block}{\en Definition}
+		The class containing every language L for which there is a probabilistic Turing machine with the following properties:
+		\begin{enumerate}
+			\item It always runs in polynomial time.
+			\item On any given run of the algorithm, there is a probability $\leq \frac{1}{3}$ of giving the wrong answer, whether the answer is YES or NO.
+		\end{enumerate}
+	\end{block}
+	\vspace{5mm}
+	\begin{block}{Quantum Computing Calculations}
+			There is a similar complexity class, which deals with decision problems solved by quantum computers in polynomial time and is named Bounded-Error Quantum Polynomial Time.
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{PP (Probabilistic Polynomial Time)\el}}
+	\begin{block}{\en Definition \el}
+		The class containing every language L for which there is a probabilistic Turing machine with the following properties:
+		\begin{enumerate}
+			\item It always runs in polynomial time.	
+			\item If the correct answer to the question of accepting a string is YES, then it returns YES with a probability $> \frac{1}{2}$.
+			\item If the correct answer to the question of accepting a string is NO, then it returns YES with a probability $\leq \frac{1}{2}$.	
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{PSPACE\el}}
+	\begin{block}{\en Definition \el}
+		The class containing every language L that is decidable by a deterministic Turing machine that uses polynomial amount of space.
+	\end{block}
+	\vspace{5mm}
+	\en \underline{Problems included in this class}  \el\pause
+	\begin{itemize}
+	\item \en First-order Theory Problems \pause
+	\item QSAT\pause
+	\item Succinct versions of many graph problems. \el
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\en{NPSPACE\el}}
+	\begin{block}{\en Definition \el}
+		The class containing every language L that is decidable by a \textbf{non}-deterministic Turing machine that uses polynomial amount of space.
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{EXPSPACE\el}}
+	\begin{block}{\en Definition \el}
+		The class containing every language L that is decidable by a deterministic Turing machine that uses exponential amount of space.
+	\end{block}
+	\vspace{5mm}
+	\en \underline{Problems included in this class}  \el \pause
+	\begin{itemize}
+	\item \en Ideal Membership Problem\pause
+	\item Problems related to Vector Addition Systems\pause
+	\item Temporal Planning with Concurrent Actions
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{\en{NEXPSPACE\el}}
+	\begin{block}{\en Definition \el}
+		The class containing every language L that is decidable by a \textbf{non}-deterministic Turing machine that uses exponential amount of space.
+	\end{block}
+\end{frame}
+
+\begin{frame}{\en{Savitch's Theorem\el}}
+	Proved by Walter Savitch in 1970, it gives a foundational relationship between deterministic and non-deterministic space complexity. The theorem states that for any function $f\in\Omega\left(log\left(n\right()\right)$, it holds that:\\
+	\vspace{3mm}
+	\begin{center}
+		$NSPACE\left(f\left(n\right)\right) \subseteq DSPACE\left(f\left(n\right)\right)^2$
+	\end{center}\pause
+	\vspace{3mm}
+	Two useful results arise from the above theorem:\pause
+	\vspace{2mm}
+		\begin{enumerate}
+			\item $PSPACE = NPSPACE$\pause
+			\item $EXPSPACE = NEXPSPACE$
+		\end{enumerate}
+\end{frame}
+
+\begin{frame}{Acknowledgements}
+	\begin{center}
+		Thank you for your attention.\\
+		Please feel free to make any question.\\
+		\vspace{25mm}
+		Special thanks to Thanasis Vranis for his valuable assistance.
+	\end{center}
+\end{frame}
+
+\end{document}
