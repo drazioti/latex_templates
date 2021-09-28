@@ -32,7 +32,7 @@
 {\footnotesize{
 \noindent
 \begin{algor} : {Αλγόριθμος Απαρίθμησης (\lt{KFP enumeration algorithm})}\label{al-enum}\\
-{\bf Είσοδος.}  Μια διατεταγμένη βάση $\mathcal{B}=\{{\bf b}_1,\dots, {\bf{b}}_n\}\subset\mathbb{Z}^{m}$ 
+{\bf Είσοδος.}  Μια διατεταγμένη βάση %$\mathcal{B}=\{{\bf b}_1,\dots , {\bf{b}}_n\}\subset\mathbb{Z}^{m}$ 
 του πλέγματος $\mathcal{L}(\mathcal{B})$ και ένα θετικό αριθμό $R.$ \\
 {\bf Έξοδος.} Όλα τα διανύσματα ${\bf x}\in \L$ με $||{
 \bf x}||\leq R.$
@@ -44,4 +44,9 @@
 	\texttt{04.}   \hspace*{0.4cm} $c_{i}\leftarrow -\sum_{j=i+1}^n x_j\mu_{ji}$\\
 	\texttt{05.}  ...\\ \\ \\
 	\texttt{19.}	{\texttt{return S}}\\
-}}}
+}}}}
+\subsection{ Παράδειγμα εισαγωγής κώδικα}
+Μια υλοποίηση στην \tl{python} θα μπορούσε να είναι η παρακάτω,
+{\tl{
+\lstinputlisting[language=python]{code/karatsuba.py}
+}}

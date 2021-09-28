@@ -27,7 +27,7 @@
 \usepackage{chemarrow}
 \newcommand\aug{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
 \usepackage{graphicx}
-\usepackage{gfsdidot}
+%\usepackage{gfsdidot}
 \usepackage[LGR,T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english,greek]{babel} % και για τις δυο γλώσσες
@@ -49,9 +49,41 @@
  right=25mm,
  %top=20mm,
  }
+ 
+ %% το παρακάτω χρησιμοποιείται για την εισαγωγή κώδικα
+\usepackage{listings}
+ \usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    upquote=true,
+    columns=fullflexible
+}
+\lstset{style=mystyle}
 
 \newtheorem{algor}{\bf{Αλγόριθμος}}[subsection]
 \newcommand{\lt}{\latintext}
+
+\def\tl{\textlatin }
+
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%% PAGE 0 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
