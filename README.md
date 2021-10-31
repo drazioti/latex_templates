@@ -20,6 +20,7 @@ You can use pictures/figures that use creative common licenses. Such as,
 - [https://search.creativecommons.org/](https://search.creativecommons.org/)
 - [https://copyright.unimelb.edu.au/guides/finding-creative-commons-images-using-google](https://copyright.unimelb.edu.au/guides/finding-creative-commons-images-using-google)
 - https://www.flickr.com/creativecommons/
+- Wikipedia
 
 
 
