@@ -1,0 +1,1 @@
+Latex template for writing master thesis suitbale for overleaf
